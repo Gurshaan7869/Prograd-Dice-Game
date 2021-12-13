@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body {
+        background-image: url("https://wallpapercave.com/wp/o3mD2kA.jpg");
+        background-color: #cccccc;
+    }
+    </style>
+    <script>
+        let one = 0,two = 0,count=1;
+        function myFunction() {
+        let x = Math.floor((Math.random() * 6) +1);                   
+            if(count%2==0){
+                one = one + x;
+                document.getElementById("p1").innerHTML="Player 1 : " + one;
+            }
+            else{
+                two = two + x;
+                document.getElementById("p2").innerHTML="Player 2 : " + two;
+            }
+        count++;
+        if(one>49){
+        alert("Player one wins !!!");
+        document.getElementById("p1").innerHTML="Player 1 wins !!!!!";
+        return;
+        }
+        if(two>49){
+        alert("player 2 Wins");
+        document.getElementById("p2").innerHTML="Player 2 wins !!!!!";
+        return;
+        }
+    }
+    </script>
+</head>
+<body style="text-align: center;">
+    <h1 style="margin-top: 10%;margin-left: 25%;" id="p1">player 1: </h1>
+    <h1 style="margin-left: 25%;"id="p2">player 2: </h1>        
+    <button style="margin-left: 25%;border-radius: 25px;padding-left: 15%;padding-right: 15%;padding-top: 1%;padding-bottom: 1%;font-size: 20px;"onclick="myFunction()">ROLL DICE</button>
+</body>
+</html>
